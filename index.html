@@ -1,11 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Memento</title>
+  <title>Memento</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fdf5f7;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      width: 320px;
+      padding: 30px 25px;
+      background: white;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      color: #9b6575;
+    }
+
+    p {
+      color: #888;
+      margin-bottom: 25px;
+    }
+
+    .voice {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      background: #f8e9ee;
+      border-radius: 18px;
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50%;
+      background: #b9788b;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .waves {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      height: 35px;
+    }
+
+    .waves span {
+      width: 3px;
+      height: 12px;
+      background: #b9788b;
+      border-radius: 5px;
+    }
+
+    .waves span:nth-child(2) { height: 22px; }
+    .waves span:nth-child(3) { height: 30px; }
+    .waves span:nth-child(4) { height: 18px; }
+    .waves span:nth-child(5) { height: 27px; }
+    .waves span:nth-child(6) { height: 14px; }
+    .waves span:nth-child(7) { height: 25px; }
+    .waves span:nth-child(8) { height: 17px; }
+  </style>
 </head>
+
 <body>
-<h1>Memento</h1>
-<p>Some things are worth keeping.</p>
-<button>Open Voice Message</button>
+
+  <div class="card">
+
+    <h1>Memento</h1>
+    <p>Some things are worth keeping.</p>
+
+    <div class="voice">
+
+      <button onclick="playVoice()" id="playBtn">▶</button>
+
+      <div class="waves">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+    <audio id="voice">
+      <source src="voice.mp3" type="audio/mpeg">
+    </audio>
+
+  </div>
+
+  <script>
+    const voice = document.getElementById("voice");
+    const playBtn = document.getElementById("playBtn");
+
+    function playVoice() {
+      if (voice.paused) {
+        voice.play();
+        playBtn.innerHTML = "❚❚";
+      } else {
+        voice.pause();
+        playBtn.innerHTML = "▶";
+      }
+    }
+
+    voice.onended = function() {
+      playBtn.innerHTML = "▶";
+    };
+  </script>
+
 </body>
-</html>
+      </html>
