@@ -3,7 +3,47 @@
 <head>
   <title>Memento</title>
 
-    
+    .photo {
+  position: absolute;
+  width: 75px;
+  height: 90px;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  border-radius: 3px;
+  z-index: 0;
+}
+
+.photo1 {
+  top: 15%;
+  left: 8%;
+  transform: rotate(-8deg);
+}
+
+.photo2 {
+  top: 15%;
+  right: 8%;
+  transform: rotate(8deg);
+}
+
+.photo3 {
+  bottom: 15%;
+  left: 8%;
+  transform: rotate(7deg);
+}
+
+.photo4 {
+  bottom: 15%;
+  right: 8%;
+  transform: rotate(-7deg);
+}
+
+@media (max-width: 600px) {
+  .photo {
+    width: 55px;
+    height: 68px;
+  }
+}
   <style>
     body {
       margin: 0;
@@ -124,6 +164,9 @@
       playBtn.innerHTML = "▶";
     };
   </script>
-
+<img class="photo photo1" src="file_000000004df47243bcb66bfc02b76828.png">
+<img class="photo photo2" src="file_00000000418c724391b5fcfc47251b4d.png">
+<img class="photo photo3" src="file_0000000038b07243857f69fe2dbcbc58.png">
+<img class="photo photo4" src="file_0000000016387243ad6b207c577a63d0.png">
 </body>
 </html>
