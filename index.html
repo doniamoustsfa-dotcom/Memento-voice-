@@ -176,24 +176,62 @@
 }
 </style>
 
+  
+<style>
+.memory-photos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.memory-photo {
+  width: 60px;
+  height: 70px;
+  padding: 4px;
+  background: white;
+  box-shadow: 0 2px 8px #0003;
+  transform: rotate(-5deg);
+}
+
+.memory-photo:nth-child(2) {
+  transform: rotate(5deg);
+}
+
+.memory-photo:nth-child(3) {
+  transform: rotate(-3deg);
+}
+
+.memory-photo:nth-child(4) {
+  transform: rotate(7deg);
+}
+
+.memory-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+
 <div class="memory-photos">
 
-  <div class="memory-photo photo1">
+  <div class="memory-photo">
     <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=200&q=80">
   </div>
 
-  <div class="memory-photo photo2">
+  <div class="memory-photo">
     <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=200&q=80">
   </div>
 
-  <div class="memory-photo photo3">
+  <div class="memory-photo">
     <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=200&q=80">
   </div>
 
-  <div class="memory-photo photo4">
+  <div class="memory-photo">
     <img src="https://images.unsplash.com/photo-1501901609772-df0848060b33?auto=format&fit=crop&w=200&q=80">
   </div>
 
 </div>
+
 </body>
       </html>
