@@ -125,6 +125,75 @@
       playBtn.innerHTML = "▶";
     };
   </script>
+<style>
+.memory-photos {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.memory-photo {
+  position: absolute;
+  width: 65px;
+  height: 80px;
+  padding: 4px 4px 12px;
+  background: white;
+  box-shadow: 0 3px 10px #0002;
+  border-radius: 3px;
+}
+
+.memory-photo img {
+  width: 100%;
+  height: 65px;
+  object-fit: cover;
+}
+
+.photo1 {
+  left: 18%;
+  top: 25px;
+  transform: rotate(-10deg);
+}
+
+.photo2 {
+  right: 18%;
+  top: 25px;
+  transform: rotate(10deg);
+}
+
+.photo3 {
+  left: 28%;
+  bottom: 15px;
+  transform: rotate(7deg);
+}
+
+.photo4 {
+  right: 28%;
+  bottom: 15px;
+  transform: rotate(-7deg);
+}
+</style>
+
+<div class="memory-photos">
+
+  <div class="memory-photo photo1">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=200&q=80">
+  </div>
+
+  <div class="memory-photo photo2">
+    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=200&q=80">
+  </div>
+
+  <div class="memory-photo photo3">
+    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=200&q=80">
+  </div>
+
+  <div class="memory-photo photo4">
+    <img src="https://images.unsplash.com/photo-1501901609772-df0848060b33?auto=format&fit=crop&w=200&q=80">
+  </div>
+
+</div>
 </body>
       </html>
