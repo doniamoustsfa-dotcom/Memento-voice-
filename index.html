@@ -3,47 +3,6 @@
 <head>
   <title>Memento</title>
 
-    .photo {
-  position: absolute;
-  width: 75px;
-  height: 90px;
-  object-fit: cover;
-  border: 5px solid white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  border-radius: 3px;
-  z-index: 0;
-}
-
-.photo1 {
-  top: 15%;
-  left: 8%;
-  transform: rotate(-8deg);
-}
-
-.photo2 {
-  top: 15%;
-  right: 8%;
-  transform: rotate(8deg);
-}
-
-.photo3 {
-  bottom: 15%;
-  left: 8%;
-  transform: rotate(7deg);
-}
-
-.photo4 {
-  bottom: 15%;
-  right: 8%;
-  transform: rotate(-7deg);
-}
-
-@media (max-width: 600px) {
-  .photo {
-    width: 55px;
-    height: 68px;
-  }
-}
   <style>
     body {
       margin: 0;
@@ -117,6 +76,7 @@
     .waves span:nth-child(8) { height: 17px; }
   </style>
 </head>
+
 <body>
 
   <div class="card">
@@ -146,6 +106,7 @@
     </audio>
 
   </div>
+
   <script>
     const voice = document.getElementById("voice");
     const playBtn = document.getElementById("playBtn");
@@ -164,5 +125,6 @@
       playBtn.innerHTML = "▶";
     };
   </script>
+
 </body>
 </html>
